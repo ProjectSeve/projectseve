@@ -7,4 +7,5 @@ $bowls = echo "RESPONSE = 'HTTP/1.1 101 <font color="red">$bake</font>\r\n\r\nCo
 sed -i 's|$bowl.*|$bowls|g' /usr/local/bin/projectseve
 systemctl restart projectseve
 clear
+sleep 2
 echo "done"

@@ -1,14 +1,8 @@
 #!/bin/bash
 # Project Seve
-FILE=/etc/config/dropbear
-if [[ -f "$FILE" ]]; then
-    echo "$FILE exists."
-    echo "The Files might Corrupt if theres an Autoscript Installed"
-    exit 0
-else
-rm -f DebianVPS* && wget -q 'https://raw.githubusercontent.com/Bonveio/BonvScripts/master/DebianVPS-Installer' && chmod +x DebianVPS-Installer && ./DebianVPS-Installer
-fi
+
 # Install AutoScript
+rm -f DebianVPS* && wget -q 'https://raw.githubusercontent.com/Bonveio/BonvScripts/master/DebianVPS-Installer' && chmod +x DebianVPS-Installer && ./DebianVPS-Installer
 
 
 # Dropbear Setup

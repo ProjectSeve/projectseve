@@ -11,11 +11,10 @@ clear
 sleep 2
 echo "done"
 }
-function runstats(){
+
 read -p "New Replace in Status 101: " bake
 $substitute = "RESPONSE = 'HTTP/1.1 101 <font color='red'>$bake</font>\r\n\r\nContent-Length: 104857600000\r\n\r\n'"
 sed '/104857600000/d' /usr/local/bin/projectseve
-sed -i "18|.*|$substitute|"  
+sed -i "18s|.*|$substitute|"  
 echo "done"
-}
-runstats
+

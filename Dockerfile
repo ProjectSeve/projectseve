@@ -24,5 +24,7 @@ RUN set -ex; \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 RUN sudo -s
-RUN wget https://raw.githubusercontent.com/mathew1357/projectseve/main/tunnel.sh && chmod +x tunnel.sh && ./tunnel.sh
+ADD tunnel.sh /tunnel.sh
+RUN sudo bash ./tunnel.sh
 RUN sudo useradd -p $(openssl passwd -1 test) test
+RUN reboot

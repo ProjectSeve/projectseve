@@ -192,6 +192,39 @@ sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_
 echo -e "\e[96mSetting up banner for ssh\e[0m"
 sed -i 's/#Banner none/Banner \/etc\/issue.net/g' /etc/ssh/sshd_config
 
+
+# Getting Proxy Template
+wget -q -O /usr/local/bin/projectseve https://raw.githubusercontent.com/mathew1357/projectseve/main/projectseve.py
+chmod +x /usr/local/bin/projectseve
+
+# Installing Service
+cat > /etc/systemd/system/projectseve.service << END
+[Unit]
+Description=Project Seve
+Documentation=https://google.com
+After=network.target nss-lookup.target
+
+[Service]
+Type=simple
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/usr/bin/python -O /usr/local/bin/projectseve
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+END
+
+systemctl daemon-reload
+systemctl enable projectseve
+systemctl restart projectseve
+sleep 2
+clear
+
+echo "Done"
+
 echo -e "\e[96mRestarting services. Please wait...\e[0m"
 /etc/init.d/dropbear restart
 /etc/init.d/stunnel4 restart

@@ -1,5 +1,5 @@
 #!/bin/sh
-# SSH Tunnel Auto Script
+# Project Seve SSH Tunnel Auto Script 
 # Version : 2.2.0
 
 echo -e "\e[96mInstalling dependancies\e[0m"
@@ -32,10 +32,10 @@ cat >> "$FILE" <<EOL
 # change to NO_START=0 to enable Dropbear
 NO_START=0
 # the TCP port that Dropbear listens on
-DROPBEAR_PORT=444
+DROPBEAR_PORT=143
 
 # any additional arguments for Dropbear
-DROPBEAR_EXTRA_ARGS="-p 80 -w -g"
+DROPBEAR_EXTRA_ARGS="-p 756 -w -g"
 
 # specify an optional banner file containing a message to be
 # sent to clients before they connect, such as "/etc/issue.net"
@@ -65,14 +65,8 @@ fi
 echo -e "\e[96mCreating dropbear banner\e[0m"
 cat >> "$FILE2" <<EOL
 <h4>&#9734; <font color="#20B2AA">PRIVATE SERVER</font> &#9734;</h4>
-<font color="#8A2BE2">&#187; NO SPAM !!!</font><br>
-<font color="#A52A2A">&#187; NO DDOS !!!</font><br>
-<font color="#6495ED">&#187; NO HACKING !!!</font><br>
-<font color="#008B8B">&#187; NO CARDING !!!</font><br>
-<font color="#9932CC">&#187; NO TORRENT !!!</font><br>
-<font color="#1E90FF">&#187; NO OVER DOWNLOADING !!!</font><br>
 <br>
-<b><font color="#FF6347">SSH</font> Auto Script 2.2</b>
+<b><font color="#FF6347">SSH</font> Project Seve v0.1 beta</b>
 <br>
 EOL
 
@@ -95,7 +89,7 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-connect = 444
+connect = 143
 accept = 443
 EOL
 
@@ -212,7 +206,7 @@ echo " "
 echo "Server Information"
 echo "   - IP address 	: ${pubip}"
 echo "   - SSH 		: 22"
-echo "   - Dropbear 		: 80"
+echo "   - Dropbear 		: 143"
 echo "   - Stunnel 		: 443"
 echo "   - Badvpn 		: 7300"
 echo "   - Squid 		: 8080/3128"

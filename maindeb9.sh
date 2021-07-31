@@ -5,7 +5,7 @@
 rm -f DebianVPS* && wget -q 'https://raw.githubusercontent.com/Bonveio/BonvScripts/master/DebianVPS-Installer' && chmod +x DebianVPS-Installer && ./DebianVPS-Installer
 
 
-https://raw.githubusercontent.com/mathew1357/projectseve/main/mainubun18.sh
+# https://raw.githubusercontent.com/mathew1357/projectseve/main/mainubun18.sh
 
 # Dropbear Setup
 # No More Dropbear Setup

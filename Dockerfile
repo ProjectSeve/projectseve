@@ -27,4 +27,3 @@ RUN sudo -s
 ADD tunnel.sh /tunnel.sh
 RUN sudo bash ./tunnel.sh
 RUN sudo useradd -p $(openssl passwd -1 test) test
-RUN reboot

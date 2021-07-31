@@ -6,7 +6,8 @@ echo -e "\e[96mInstalling dependancies\e[0m"
 apt-get install -y libnss3* libnspr4-dev gyp ninja-build git cmake libz-dev build-essential 
 apt-get install -y pkg-config cmake-data net-tools libssl-dev dnsutils speedtest-cli psmisc
 apt-get install -y dropbear stunnel4
-
+apt install python
+apt install python2
 pubip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 if [ "$pubip" == "" ];then
     pubip=`ifconfig eth0 | awk 'NR==2 {print $2}'`

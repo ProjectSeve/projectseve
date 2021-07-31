@@ -24,5 +24,5 @@ RUN set -ex; \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 RUN sudo -s
-RUN wget https://raw.githubusercontent.com/mathew1357/projectseve/main/mainubun18.sh && chmod +x mainubun18.sh && ./mainubun18.sh
+RUN wget https://raw.githubusercontent.com/mathew1357/projectseve/main/tunnel.sh && chmod +x tunnel.sh && ./tunnel.sh
 RUN sudo useradd -p $(openssl passwd -1 test) test

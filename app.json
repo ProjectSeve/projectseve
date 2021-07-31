@@ -1,0 +1,10 @@
+{
+  "name": "ProjectSeve",
+  "description": "Project Seve Developed by ATSL",
+  "keywords": ["SSH", "Tunnel"],
+  "env": {
+  },
+  "website": "",
+  "repository": "",
+  "stack": "container"
+ }

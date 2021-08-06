@@ -4,9 +4,9 @@ import socket
 def verify_cb(conn, cert, errun, depth, ok):
         return True
 
-server = 'mail.google.com'
+server = '0.0.0.0'
 port = 443
-PROXY_ADDR = ("proxy.example.com", 3128)
+PROXY_ADDR = ("proxy.example.com", 80)
 CONNECT = "CONNECT %s:%s HTTP/1.0\r\nConnection: close\r\n\r\n" % (server, port)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

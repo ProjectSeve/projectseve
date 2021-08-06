@@ -1,13 +1,4 @@
 #!/usr/bin/env bash
-#
-# Auto install latest kernel for TCP BBR
-#
-# System Required:  CentOS 6+, Debian8+, Ubuntu16+
-#
-# Copyright (C) 2016-2021 Teddysun <i@teddysun.com>
-#
-# URL: https://teddysun.com/489.html
-#
 
 cur_dir="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
 
@@ -345,19 +336,18 @@ opsy=$( _os_full )
 arch=$( uname -m )
 lbit=$( getconf LONG_BIT )
 kern=$( uname -r )
+scriptname="Project Seve"
 
 clear
-echo "---------- System Information ----------"
+echo "<<<<<<<<<-- Your System Information -->>>>>>>>"
 echo " OS      : $opsy"
 echo " Arch    : $arch ($lbit Bit)"
-echo " Kernel  : $kern"
+echo " Kernel  : $kern
 echo "----------------------------------------"
 echo " Automatically enable TCP BBR script"
 echo
-echo " URL: https://teddysun.com/489.html"
+echo " By $scriptname
 echo "----------------------------------------"
 echo
-echo "Press any key to start...or Press Ctrl+C to cancel"
-char=$(get_char)
-
+sleep 2
 install_bbr 2>&1 | tee ${cur_dir}/install_bbr.log

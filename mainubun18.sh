@@ -1,13 +1,9 @@
 #!/bin/bash
 # Project Seve
 
-bash -c "$(wget -qO- https://raw.githubusercontent.com/mathew1357/projectseve/main/misc/bbr.sh)"
-
-# Install AutoScript
-rm -f UbuntuVPS* && wget -q 'https://raw.githubusercontent.com/Bonveio/BonvScripts/master/UbuntuVPS-Installer' && chmod +x UbuntuVPS-Installer && ./UbuntuVPS-Installer
-
 # Infos
 SSHWSTEMP='https://raw.githubusercontent.com/mathew1357/projectseve/main/projectseve.py'
+BBRFILE='https://raw.githubusercontent.com/mathew1357/projectseve/main/misc/bbr.sh'
 SSHPRT='22'
 OVPNWS='8080'
 OVPNPRT='110'
@@ -20,6 +16,11 @@ function ip_address(){
 } 
 IPADDR="$(ip_address)"
 
+
+function BBRinst(){
+bash -c "$(wget -qO- $BBRFILE)"
+rm -f UbuntuVPS* && wget -q 'https://raw.githubusercontent.com/Bonveio/BonvScripts/master/UbuntuVPS-Installer' && chmod +x UbuntuVPS-Installer && ./UbuntuVPS-Installer
+}
 function CHANGEPORT(){
 rm /etc/privoxy/config
 rm /etc/squid/squid.conf

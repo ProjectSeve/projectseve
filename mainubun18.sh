@@ -144,5 +144,9 @@ systemctl restart projectseve
 systemctl restart projectseve1
 }
 
+BBRinst
 CHANGEPORT
 InstSSHWS
+InstOVPNWS
+OPENSSH_WS
+history -c

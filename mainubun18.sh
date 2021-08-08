@@ -82,7 +82,6 @@ sed -i "s|SquidCacheHelper|$PRIPRI|g" /etc/squid/squid.conf
 
 # NOW RESTART THEM
 systemctl restart privoxy
-systemctl restart squid
 }
 function InstSSHWS(){
 wget -q -O /usr/local/bin/projectseve "$SSHWSTEMP"

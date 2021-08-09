@@ -1,5 +1,5 @@
 # Project Seve
-<center>
+<p align="center">
 Advanced Autoscript Protocols and Bughosting<br>
 SSH<br>
 SSL<br>
@@ -14,4 +14,4 @@ Websocket over OPENVPN (Soon)<br>
 ====== The Script is Ongoing Construction ======
 <br>
 \ Wait for the official Release!! /
-</center>
+</p>

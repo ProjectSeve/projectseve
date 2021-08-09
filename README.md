@@ -1,6 +1,5 @@
-<p align="center">
 # Project Seve
-
+<p align="center">
 Advanced Autoscript Protocols and Bughosting<br>
 SSH<br>
 SSL<br>

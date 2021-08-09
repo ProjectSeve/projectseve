@@ -1,16 +1,16 @@
 # Project Seve
 
-Advanced Autoscript Protocols and Bughosting
-SSH
-SSL
-OPENVPN
-Dropbear
-WIREGUARD (Soon)
-DNS TUNNEL (Soon)
-OHP
-Websocket (Soon)
-Websocket over OPENVPN (Soon)
-
+Advanced Autoscript Protocols and Bughosting<br>
+SSH<br>
+SSL<br>
+OPENVPN<br>
+Dropbear<br>
+WIREGUARD (Soon)<br>
+DNS TUNNEL (Soon)<br>
+OHP<br>
+Websocket (Soon)<br>
+Websocket over OPENVPN (Soon)<br>
+<br>
 ====== The Script is Ongoing Construction ======
-
+<br>
 \ Wait for the official Release!! /

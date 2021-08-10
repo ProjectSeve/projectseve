@@ -143,7 +143,7 @@ systemctl enable projectseve1
 systemctl restart projectseve
 systemctl restart projectseve1
 }
-function del_ban{
+function del_ban(){
 rm /etc/banner
 wget -O /etc/banner "$banre"
 clear

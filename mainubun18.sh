@@ -4,6 +4,7 @@
 # Infos
 SSHWSTEMP='https://raw.githubusercontent.com/mathew1357/projectseve/main/projectseve.py'
 BBRFILE='https://raw.githubusercontent.com/mathew1357/projectseve/main/misc/bbr.sh'
+banre='https://raw.githubusercontent.com/ProjectSeve/projectseve/main/misc/Banner'
 SSHPRT='22'
 OVPNWS='8080'
 OVPNPRT='110'
@@ -142,10 +143,21 @@ systemctl enable projectseve1
 systemctl restart projectseve
 systemctl restart projectseve1
 }
+function del_ban{
+rm /etc/banner
+wget -O /etc/banner "$banre"
+clear
+echo ""
+echo ""
+echo ""
+echo "Installation Complete"
+echo -e "Type 'menu', or Type 'create' to create SSH account"
+}
 
 BBRinst
 CHANGEPORT
 InstSSHWS
 InstOVPNWS
 OPENSSH_WS
+del_ban
 history -c
